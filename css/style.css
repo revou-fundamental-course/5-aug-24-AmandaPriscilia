@@ -1,0 +1,323 @@
+/* Import font dari Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Aturan umum untuk semua elemen: menghapus margin dan padding, mengatur box-sizing dan font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins untuk seluruh elemen */
+}
+header {
+  width: 100%; /* lebar dari header*/
+  text-align: center; /* Pusatkan teks */
+  padding: 10px 80px; /* Beri jarak atas dan bawah */
+  font-size: 19px; /* Sesuaikan ukuran font */
+  font-weight: bold; /* Buat teks tebal */
+  background-color: #F5EFE6; /* Warna latar belakang header*/
+  position: fixed; /* Tempelkan header di atas */
+  top: 0; /* Posisi di bagian paling atas */
+  left: 0; /* Mulai dari kiri */
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Pindahkan form ke kanan */
+    min-height: 100vh; /* Pastikan body memiliki tinggi minimal layar penuh */
+    background-image: url('../assets/front-view-young-female-with-glass-water-waist-measure-green.jpg'); /* Gambar latar belakang */
+    background-size: cover; /* Tutupi seluruh elemen */
+    background-position: center; /* Posisi gambar di tengah */
+    background-repeat: no-repeat; /* Jangan ulang gambar */
+    padding-right: 80px; /* Ruang tambahan di sisi kanan */
+    padding-top: 40px; /* Jarak atas */
+    padding-bottom: 40px; /* jarak bawah*/
+}
+
+.box {
+    width: 550px; /* Lebar kotak form */
+    background-color: #F5EFE6; /* Warna latar belakang kotak */
+    border-radius: 20px; /* Membuat sudut kotak melengkung */
+    text-align: center; /* Teks di dalam kotak dipusatkan */
+    box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.5); /* Bayangan kotak */
+    margin-right: 0; /* Menghapus margin kanan */
+    margin-top: 60px; /* Margin atas untuk jarak dari elemen atas */
+    margin-bottom: 40px; /* Margin bawah untuk jarak dari elemen bawah */
+}
+#infoText {
+  padding: 10px; /* Padding dalam elemen */
+  font-size: 16px; /* Ukuran font */
+  text-align: left; /* Memusatkan teks */
+  border-radius: 10px; /* Membuat sudut melengkung */
+}
+
+h1 {
+    color: rgb(0, 0, 0, 0.7); /* Warna teks dengan transparansi */
+    font-weight: bold; /* Teks tebal */
+    font-size: 26px; /* Ukuran font */
+    padding: 20px 0; /* Padding atas dan bawah */
+}
+
+.content {
+    padding: 0 30px; /* Padding kiri dan kanan */
+}
+
+.input, .inputH, .inputW {
+    background: #fff; /* Warna latar belakang */
+    box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15); /* Bayangan */
+    border-radius: 12px; /* Sudut melengkung */
+    padding: 20px 0; /* Padding atas dan bawah */
+    margin-bottom: 20px; /* Margin bawah */
+}
+
+.input label, .inputH label, .inputW label {
+    display: block; /* Mengatur label agar tampil sebagai blok */
+    font-size: 18px; /* Ukuran font label */
+    font-weight: 600; /* Font tebal */
+    color: #000; /* Warna teks */
+    margin-bottom: 20px; /* Margin bawah */
+}
+
+.input input, .inputH input, .inputW input {
+    outline: none; /* Menghapus outline default */
+    border: none; /* Menghapus border default */
+    border-bottom: 1px solid #4f7df9; /* Border bawah */
+    width: 50%; /* Lebar input */
+    text-align: center; /* Teks di tengah */
+    font-size: 28px; /* Ukuran font */
+    font-family: 'Nunito', sans-serif; /* Font untuk input */
+}
+
+.result {
+    padding: 10px 20px; /* Padding dalam elemen hasil */
+}
+
+.result p {
+    font-weight: 600; /* Font tebal */
+    font-size: 22px; /* Ukuran font */
+    color: #000; /* Warna teks */
+    margin-bottom: 15px; /* Margin bawah */
+}
+
+.result #result {
+    font-size: 36px; /* Ukuran font untuk hasil BMI */
+    font-weight: 900; /* Font sangat tebal */
+    color: #4f7df9; /* Warna teks */
+    background-color: #eaeaea; /* Warna latar belakang */
+    display: inline-block; /* Menampilkan hasil sebagai inline-block */
+    padding: 7px 20px; /* Padding dalam elemen hasil */
+    border-radius: 55px; /* Sudut melengkung */
+    margin-bottom: 25px; /* Margin bawah */
+}
+
+#comment {
+    color: #4f7df9; /* Warna teks */
+    font-weight: 800; /* Font tebal */
+}
+
+.comment {
+    display: none; /* Menyembunyikan komentar secara default */
+    border: dashed 1px; /* Border putus-putus */
+    border-radius: 7px; /* Sudut melengkung */
+    padding: 5px; /* Padding */
+}
+
+.gender {
+    display: flex; /* Menampilkan item gender sebagai flexbox */
+    justify-content: space-around; /* Ruang antara item */
+    align-items: center; /* Vertikal center */
+    background: #fff; /* Warna latar belakang putih */
+    box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15); /* Bayangan */
+    border-radius: 12px; /* Sudut melengkung */
+    padding: 20px 0; /* Padding atas dan bawah */
+    margin-bottom: 20px; /* Margin bawah */
+}
+
+/* Style untuk Radio Button */
+.gender .container {
+    display: block; /* Tampilkan sebagai blok */
+    position: relative; /* Posisi relatif */
+    padding-left: 35px; /* Ruang kiri untuk radio button */
+    margin-top: 7px; /* Margin atas */
+    cursor: pointer; /* Tangan pointer saat hover */
+    font-size: 22px; /* Ukuran font */
+    user-select: none; /* Mencegah pemilihan teks */
+}
+
+/* Sembunyikan radio button default */
+.gender .container input {
+    position: absolute; /* Posisi absolut */
+    opacity: 0; /* Sembunyikan radio button */
+    cursor: pointer; /* Tangan pointer saat hover */
+}
+
+/* Buat custom radio button */
+.checkmark {
+    position: absolute; /* Posisi absolut */
+    top: 0; /* Posisi atas */
+    left: 0; /* Posisi kiri */
+    height: 25px; /* Tinggi */
+    width: 25px; /* Lebar */
+    background-color: #eee; /* Warna latar belakang */
+    border-radius: 50%; /* Membuat lingkaran */
+}
+
+/* Hover efek untuk radio button */
+.gender .container:hover input ~ .checkmark {
+    background-color: #ccc; /* Warna latar belakang saat hover */
+}
+
+/* Warna latar belakang saat radio button dipilih */
+.gender .container input:checked ~ .checkmark {
+    background-color: #2196f3; /* Warna latar belakang saat dipilih */
+}
+
+/* Buat indikator (lingkaran) di dalam radio button */
+.checkmark:after {
+    content: '';
+    position: absolute; /* Posisi absolut */
+    display: none; /* Sembunyikan indikator saat tidak dipilih */
+}
+
+/* Tampilkan indikator saat radio button dipilih */
+.gender .container input:checked ~ .checkmark:after {
+    display: block; /* Tampilkan indikator */
+}
+
+/* Style untuk indikator */
+.gender .container .checkmark:after {
+    top: 9px; /* Posisi atas indikator */
+    left: 9px; /* Posisi kiri indikator */
+    width: 8px; /* Lebar indikator */
+    height: 8px; /* Tinggi indikator */
+    border-radius: 50%; /* Membuat lingkaran */
+    background: white; /* Warna indikator */
+}
+
+
+.containerHW {
+    display: flex; /* Menampilkan item sebagai flexbox */
+    justify-content: space-around; /* Ruang antara item */
+    align-items: center; /* Vertikal center */
+}
+
+/* Modal (background) */
+.modal {
+    display: none; /* Tersembunyi secara default */
+    position: fixed; /* Posisi tetap */
+    z-index: 1; /* Menempatkan di atas elemen lain */
+    padding-top: 100px; /* Jarak dari atas */
+    left: 0;
+    top: 0;
+    width: 100%; /* Lebar penuh */
+    height: 100%; /* Tinggi penuh */
+    overflow: auto; /* Mengaktifkan scroll jika diperlukan */
+    background-color: rgb(0, 0, 0); /* Warna latar belakang */
+    background-color: rgba(0, 0, 0, 0.4); /* Warna latar belakang dengan opasitas */
+}
+
+/* Konten Modal */
+.modal-content {
+    background-color: #fefefe; /* Warna latar belakang */
+    margin: auto; /* Margin otomatis di tengah */
+    padding: 20px; /* Padding dalam modal */
+    border: 1px solid #888; /* Border */
+    width: 600px; /* Lebar modal */
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: #393c76 -1px 2px 2px 1px; /* Bayangan */
+}
+
+#modalText {
+    padding-top: 8px; /* Padding atas */
+    padding-right: 5px; /* Padding kanan */
+    font-size: 18px; /* Ukuran font */
+    font-family: 'Poppins', sans-serif; /* Font modal */
+    color: rgb(24, 23, 23); /* Warna teks */
+}
+
+/* Tombol Tutup Modal */
+.close {
+    color: #aaaaaa; /* Warna teks */
+    float: right; /* Posisi kanan */
+    font-size: 28px; /* Ukuran font */
+    font-weight: bold; /* Font tebal */
+    cursor: pointer; /* Tangan pointer saat hover */
+    transition: all 0.3s; /* Transisi warna saat hover */
+}
+
+.close:hover {
+    color: #d41111; /* Warna saat hover */
+}
+@media (max-width: 700px) {
+    .box {
+        width: 380px; /* Lebar box pada layar kecil */
+    }
+
+    .input label {
+        font-size: 18px; /* Ukuran font label pada layar kecil */
+    }
+
+    .inputH label,
+    .inputW label {
+        font-size: 14px; /* Ukuran font label pada layar kecil */
+    }
+
+    .input input,
+    .inputH input,
+    .inputW input {
+        font-size: 24px; /* Ukuran font input pada layar kecil */
+    }
+
+    .modal-content {
+        width: 380px; /* Lebar modal pada layar kecil */
+    }
+}
+
+/* Kontainer tombol dengan jarak antara tombol */
+.button-container {
+    display: flex; /* Menampilkan tombol sebagai flexbox */
+    gap: 10px; /* Jarak antara tombol */
+    margin-top: 10px; /* Jarak atas dari elemen sebelumnya */
+}
+
+/* Tombol Hitung BMI */
+.button-container .calculate {
+    padding: 10px 95px; /* Padding */
+    border: none; /* Menghapus border */
+    color: white; /* Warna teks putih */
+    font-size: 16px; /* Ukuran font */
+    cursor: pointer; /* Tangan pointer saat hover */
+    border-radius: 5px; /* Sudut melengkung */
+    background-color: #1A3636; /* Warna latar belakang gelap */
+}
+
+.button-container .calculate:hover {
+    background-color: #677D6A; /* Warna hijau terang saat hover */
+}
+
+/* Tombol Reset */
+.button-container .reset {
+    padding: 10px 95px; /* Padding */
+    border: none; /* Menghapus border */
+    color: white; /* Warna teks putih */
+    font-size: 16px; /* Ukuran font */
+    cursor: pointer; /* Tangan pointer saat hover */
+    border-radius: 5px; /* Sudut melengkung */
+    background-color:  #820300; /* Warna merah maroon */
+} 
+
+.button-container .reset:hover {
+    background-color: #f44336; /* Warna merah terang saat hover */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 100px;
+    background-color: #000;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
